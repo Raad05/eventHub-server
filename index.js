@@ -14,6 +14,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://event-hub-server-six.vercel.app/",
+      "https://event-hub-pi.vercel.app/",
     ],
   })
 );
