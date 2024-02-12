@@ -9,14 +9,13 @@ const app = express();
 
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://urlshortner12-ae1c0b538b3a.herokuapp.com",
-    ],
-  })
-);
+const corsOptions = {
+  origin: "https://event-hub-pi.vercel.app/",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 config();
 
 app.post("/api/v1/url", async (req, res) => {
