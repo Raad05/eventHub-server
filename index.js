@@ -9,13 +9,7 @@ const app = express();
 
 app.use(express.json());
 
-const corsOptions = {
-  origin: "https://event-hub-pi.vercel.app/",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 config();
 
 app.post("/api/v1/url", async (req, res) => {
