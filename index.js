@@ -13,8 +13,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://event-hub-server-six.vercel.app/",
-      "https://event-hub-pi.vercel.app/",
+      "https://urlshortner12-ae1c0b538b3a.herokuapp.com",
     ],
   })
 );
